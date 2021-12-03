@@ -16,8 +16,8 @@ describe("parseConfigFile", () => {
     ]);
 
     expect(configLines.generation).toEqual(3);
-    expect(configLines.x).toEqual(8);
-    expect(configLines.y).toEqual(4);
+    expect(configLines.y).toEqual(8);
+    expect(configLines.x).toEqual(4);
     expect(configLines.initialState).toEqual([
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 1, 1, 0, 0, 0],
