@@ -36,10 +36,7 @@ export const nextGeneration = (options: GenerationOptions): number[][] => {
       } else if (options.grid[l][m] == 0 && aliveNeighbours == 3) {
         //Any dead cell with exactly three live neighbours becomes a live cell.
         nextGrid[l][m] = 1;
-      } else {
-        //no change
-        nextGrid[l][m] = options.grid[l][m];
-      }
+      } 
     }
   }
 
