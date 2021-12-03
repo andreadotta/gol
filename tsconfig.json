@@ -13,8 +13,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/test/*": ["test/*"],
+      "@page": ["page"],
+      "@page/*": ["page/*"],
+      "@lib": ["lib"],
+      "@lib/*": ["lib/*"],
+      "@lib-ui": ["lib-ui"],
+      "@lib-ui/*": ["lib-ui/*"],     
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib-ui/Draw.tss", "test/lib/CreateGrid.test.js", "lib/UseInterval.js"],
   "exclude": ["node_modules"]
 }

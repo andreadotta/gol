@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #084C61;  
 }
 
 a {
@@ -13,4 +14,22 @@ a {
 
 * {
   box-sizing: border-box;
+}
+h1 {
+  color: #CDC392;
+}
+button {
+  background-color: #38A3A5;
+  border: 1px solid #7E5920;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #230903;
+}
+
+.grid-wrapper {
+  padding: 10px;
+  margin: 10px;
+}
+.grid {
+  margin-bottom: 30px;
 }
