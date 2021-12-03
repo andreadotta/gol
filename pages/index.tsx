@@ -7,10 +7,7 @@ import { join } from 'node:path';
 import { parseConfigFile } from '@lib/ParseConfigFile';
 
 export async function getServerSideProps(context: any) {
-//  const text = readFileSync(join(__dirname, '../../../config', 'gol.txt'));
-
 const config = parseConfigFile(join(__dirname, '../../../config', 'gol.txt'));
-
   return {
     props: config
   }
