@@ -2,33 +2,49 @@ Game of life
 
 ## Getting Started
 
-Comile and execute:
+Compile and execute:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm run build
 ```
+
+```bash
+npm run build
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Config
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The config file gol.text that give the initial state is in folder [root]/config
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Problem description
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Given a input generation the goal of this kata is to calculate the next
+generation. The world consists of a two dimensional grid of cells, where
+each cell is either dead or alive. For the purpose of this kata let's assume
+that the grid is finite and no life can exist off the edges.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Given a cell we define its eight neighbours as the cells that are horizontally,
+vertically, or diagonally adjacent.
 
-## Deploy on Vercel
+When calculating the next generation you should follow these rules
+Any live cell with fewer than two live neighbours dies
+Any live cell with two or three live neighbours lives on to the next
+generation
+Any live cell with more than three live neighbours dies
+Any dead cell with exactly three live neighbours becomes a live cell
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Implementation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The initial state (the current generation) will be provided via a text file
+that specifies:
+the current generation numbe
+the grid size
+the population state (* represents a live cell, . represents a dead cell)
+
+
+
