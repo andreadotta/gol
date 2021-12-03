@@ -2,6 +2,10 @@
 
 ## Getting Started
 
+Install
+```bash
+npm install
+```
 Compile and execute:
 
 ```bash
