@@ -23,21 +23,21 @@ export const parseConfigLines = (lines: Array<string>): Output => {
     // get value of generation from  of config file
     return parseInt(line.replace("Generation", "").trim());
   };
-  const y = (line: string): number => {
+  const x = (line: string): number => {
     // get x from line of config file
     const p: string | undefined = !_.isNil(line.split(" ").shift())
       ? line.split(" ").shift()
       : "0";
     return parseInt(p as string);
   };
-  const x = (line: string): number => {
+  const y = (line: string): number => {
     // get y from line of config file
     const p: string | undefined = !_.isNil(line.split(" ").pop())
       ? line.split(" ").pop()
       : "0";
     return parseInt(p as string);
   };
-  const grid = (lines: Array<string>, y: number): Array<Array<number>> => {
+  const grid = (lines: Array<string>, x: number): Array<Array<number>> => {
     // get a grid of lines
     const out: Array<Array<number>> = [];
     for (let index = 2; index < lines.length; index++) {

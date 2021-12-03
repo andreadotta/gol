@@ -9,8 +9,8 @@ export const Grid = (props: {
   y: number;
   initialState: Array<Array<number>>;
 }) => {
-  const numRows = props.y;
-  const numCols = props.x;
+  const numRows = props.x;
+  const numCols = props.y;
 
   const [grid, setGrid] = useState(() =>
     props.initialState
@@ -67,7 +67,7 @@ export const Grid = (props: {
       </div>
 
       <div>Generation: {generation}</div>
-      <div>Grid size: {props.y} {props.x}</div>
+      <div>Grid size: {numRows} {numCols}</div>
     </div>
   );
 };
