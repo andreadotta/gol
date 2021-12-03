@@ -41,12 +41,12 @@ that the grid is finite and no life can exist off the edges.
 Given a cell we define its eight neighbours as the cells that are horizontally,
 vertically, or diagonally adjacent.
 
-When calculating the next generation you should follow these rules
-Any live cell with fewer than two live neighbours dies
+When calculating the next generation you should follow these rules.
+Any live cell with fewer than two live neighbours dies.
 Any live cell with two or three live neighbours lives on to the next
-generation
-Any live cell with more than three live neighbours dies
-Any dead cell with exactly three live neighbours becomes a live cell
+generation.
+Any live cell with more than three live neighbours dies.
+Any dead cell with exactly three live neighbours becomes a live cell.
 
 ## Implementation
 
