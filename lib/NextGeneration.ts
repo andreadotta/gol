@@ -15,14 +15,16 @@ export const nextGeneration = (options: GenerationOptions): number[][] => {
   const nextGrid: number[][] = _.cloneDeep(options.grid);
 
   // cell loop
-  for (let l = 1; l < options.x - 1; l++) {
-    for (let m = 1; m < options.y - 1; m++) {
+  for (let l = 0; l < options.x - 1; l++) {
+    for (let m = 0; m < options.y - 1; m++) {
       let aliveNeighbours: number = 0;
 
       //find alive neighbours
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-          aliveNeighbours += options.grid[l + i][m + j];
+ 	    if ((l + i) >= 0 && (m + j) >= 0) {
+	    	aliveNeighbours += options.grid[l + i][m + j];
+	    }          
         }
       }
 
