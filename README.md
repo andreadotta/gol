@@ -52,9 +52,9 @@ Any dead cell with exactly three live neighbours becomes a live cell
 
 The initial state (the current generation) will be provided via a text file
 that specifies:
-the current generation numbe
-the grid size
-the population state (* represents a live cell, . represents a dead cell)
+1. the current generation number
+2. the grid size
+3. the population state (* represents a live cell, . represents a dead cell)
 
 
 
