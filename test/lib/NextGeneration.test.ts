@@ -4,7 +4,7 @@ import { createGrid } from "../../lib/CreateGrid";
 import { nextGeneration } from "../../lib/NextGeneration";
 
 describe("nextGeneration", () => {
-  it("should render the heading", () => {
+  it("should calculate the next generation", () => {
     const sgrid = () : number[][] => [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
